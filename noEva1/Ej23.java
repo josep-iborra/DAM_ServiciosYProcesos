@@ -9,11 +9,13 @@ public class Ej23 {
 		Scanner sc = new Scanner(System.in);
 		
 		String nombrePersona;
+		ArrayList<String> compaClases = new ArrayList<String>();
 		boolean pasar;
 		
 		do {
 		System.out.print("Por favor introduzca un nombre: ");
 		nombrePersona = sc.nextLine();
+		compaClases.add(nombrePersona);
 		
 		
 			if(isNumeric(nombrePersona)) {
@@ -22,8 +24,10 @@ public class Ej23 {
 				pasar = true;
 			}
 		}while (pasar);
-		parteB(nombrePersona);
 		
+		for(int i=0; i<compaClases.size(); i++) {
+            	System.out.println(compaClases.get(i));
+        	}
 		sc.close();
 		
    }
@@ -39,14 +43,6 @@ public class Ej23 {
 	        return false;
 	    }
 		return false;
-	}
-	public static void parteB(String nombrePersona) {
-        ArrayList<String> compaClases = new ArrayList<String>();
-        compaClases.add(nombrePersona);
-        
-        for(int i=0; i<compaClases.size(); i++) {
-            System.out.println(compaClases.get(i));
-        }
 	}
 
 }
